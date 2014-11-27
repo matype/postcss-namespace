@@ -14,7 +14,7 @@ $ npm install postcss-namespace
 // dependencies
 var fs = require("fs")
 var postcss = require("postcss")
-var calc = require("postcss-calc")
+var namespace = require("postcss-namespace")
 
 // css to be processed
 var css = fs.readFileSync("input.css", "utf8")
@@ -66,7 +66,46 @@ Yields:
 }
 ```
 
+## Options
 
+Can change prefix and suffix connection letter.
+
+### prefix
+
+Change prefix using `@prefix` letter. Default is `-`.
+
+### suffix
+Change suffix using `@suffix` letter. Default is `-`.
+
+Ex:
+
+```javascript
+var output = postcss()
+  .use(namespace({
+    "prefix": "__",
+    "suffix": "--"
+  }))
+  .process(css)
+  .css
+```
+
+Yields:
+
+```css
+.pre__class {
+  font-size: 12px;
+}
+#pre__id {
+  padding: 10px;
+}
+
+.class--suf {
+  font-size: 12px;
+}
+#id--suf {
+  padding: 10px;
+}
+```
 
 ## License
 
