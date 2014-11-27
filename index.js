@@ -1,6 +1,7 @@
 var cssSelectorParser = require('css-selector-parser').CssSelectorParser;
 var selectorParser = new cssSelectorParser();
 
+
 module.exports = function plugin (options) {
     options = options || {}
 
@@ -37,19 +38,20 @@ module.exports = function plugin (options) {
                         rule.selector = "#" + selectorParser.parse(rule.selector).rule.id + sufConnection + atRule.params;
                     }
                     rule.eachDecl(function (decl) {
-                        decl.before = "\n  "
-                        decl.after = "\n  "
+                        decl.before = rule.before
+                        decl.after = rule.after
                     })
-                    rule.after = "\n  "
                     newRules.push(rule)
                 })
-
             }
+
             atRule.removeSelf()
         })
+
         css.append(newRules)
     }
 }
+
 
 function isClassSelector (selector) {
     if (selectorParser.parse(selector).rule.classNames) return true
