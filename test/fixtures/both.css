@@ -1,0 +1,7 @@
+@prefix pre {
+  @suffix suf {
+    .class {
+      font-size: 12px;
+    }
+  }
+}

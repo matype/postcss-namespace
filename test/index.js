@@ -28,3 +28,13 @@ test('suffix', function (t) {
     assert(t, 'suffix')
     t.end()
 })
+
+test('both', function (t) {
+    assert(t, 'both')
+    t.end()
+})
+
+test('nested', function (t) {
+    assert(t, 'nested')
+    t.end()
+})
