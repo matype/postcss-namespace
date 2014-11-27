@@ -1,0 +1,19 @@
+{
+  "name": "postcss-namespace",
+  "version": "0.0.1",
+  "description": "PostCSS plugin for the scope of name binding",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/morishitter/postcss-namespace/git"
+  },
+  "keywords": ["postcss","plugin","namespace","css"],
+  "author": "Masaaki Morishita",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+  }
+}
