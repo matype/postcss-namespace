@@ -1,6 +1,5 @@
 var cssSelectorParser = require('css-selector-parser').CssSelectorParser;
 var selectorParser = new cssSelectorParser();
-var inspect = require('obj-inspector')
 
 module.exports = function plugin (options) {
     options = options || {}
@@ -20,7 +19,6 @@ module.exports = function plugin (options) {
                     if (isIdSelector(rule.selector)) {
                         rule.selector = "#" + atRule.params + sufConnection + selectorParser.parse(rule.selector).rule.id
                     }
-//                    inspect(rule)
                     rule.eachDecl(function (decl) {
                         decl.before = rule.before
                         decl.after = rule.after
