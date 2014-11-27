@@ -10,10 +10,20 @@
     "type": "git",
     "url": "git://github.com/morishitter/postcss-namespace/git"
   },
-  "keywords": ["postcss","plugin","namespace","css"],
+  "keywords": [
+    "postcss",
+    "plugin",
+    "namespace",
+    "css"
+  ],
   "author": "Masaaki Morishita",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "css-selector-parser": "^1.0.3"
+  },
   "devDependencies": {
+    "postcss": "^3.0.4",
+    "tape": "^3.0.3",
+    "tap": "^0.4.13"
   }
 }

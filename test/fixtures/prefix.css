@@ -1,0 +1,8 @@
+@prefix pre {
+  .class {
+    font-size: 12px;
+  }
+  #id {
+    padding: 10px;
+  }
+}
